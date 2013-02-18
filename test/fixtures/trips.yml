@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  code: 1
+  tour_name: MyString
+  start_date: 2013-02-18
+  end_date: 2013-02-18
+  organizer: MyString
+  destination: MyString
+  trip_type: MyString
+  trip_status: MyString
+
+two:
+  code: 1
+  tour_name: MyString
+  start_date: 2013-02-18
+  end_date: 2013-02-18
+  organizer: MyString
+  destination: MyString
+  trip_type: MyString
+  trip_status: MyString
