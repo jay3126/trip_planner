@@ -23,8 +23,9 @@ ActiveRecord::Schema.define(:version => 20130218065402) do
   create_table "planners", :force => true do |t|
     t.string   "name"
     t.string   "email"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "organization_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
   create_table "trips", :force => true do |t|
@@ -36,6 +37,7 @@ ActiveRecord::Schema.define(:version => 20130218065402) do
     t.string   "destination"
     t.string   "trip_type"
     t.string   "trip_status"
+    t.integer  "planner_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end

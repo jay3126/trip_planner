@@ -9,6 +9,7 @@ class CreateTrips < ActiveRecord::Migration
       t.string :destination
       t.string :trip_type
       t.string :trip_status
+      t.integer :planner_id
 
       t.timestamps
     end

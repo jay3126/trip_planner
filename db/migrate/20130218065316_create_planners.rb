@@ -3,6 +3,7 @@ class CreatePlanners < ActiveRecord::Migration
     create_table :planners do |t|
       t.string :name
       t.string :email
+      t.integer :organization_id
 
       t.timestamps
     end
