@@ -4,6 +4,9 @@ gem 'rails', '3.2.12'
 
 gem 'bootstrap-sass'
 gem 'bcrypt-ruby'
+gem 'faker'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -11,6 +14,7 @@ gem 'bcrypt-ruby'
 
 group :development, :test do
   gem 'sqlite3'
+  gem 'rspec-rails'
 end
 
 group :production, :staging do
@@ -23,6 +27,9 @@ end
 
 group :test do
   gem 'factory_girl_rails'
+  gem 'capybara'
+  gem 'cucumber-rails', :require => false
+  gem 'database_cleaner'
 end
   
 #gem 'sqlite3'
