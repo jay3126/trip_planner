@@ -1,5 +1,9 @@
 TripPlanner::Application.routes.draw do
+  get "users/new"
+
   root to: 'entrances#home'
+
+  match '/signup', to: 'users#new'
 
   match '/about', to: 'entrances#about'
   match '/contact', to: 'entrances#contact'
