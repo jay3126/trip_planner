@@ -1,5 +1,8 @@
 TripPlanner::Application.routes.draw do
-  get "entrances/home"
+  root to: 'entrances#home'
+
+  match '/about', to: 'entrances#about'
+  match '/contact', to: 'entrances#contact'
 
   resources :organizations
 
