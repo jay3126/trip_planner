@@ -1,4 +1,6 @@
 TripPlanner::Application.routes.draw do
+  get "entrances/home"
+
   resources :organizations
 
 
