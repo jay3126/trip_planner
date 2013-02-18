@@ -1,49 +1,43 @@
-<%= form_for(@trip) do |f| %>
-  <% if @trip.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@trip.errors.count, "error") %> prohibited this trip from being saved:</h2>
+<div class="row">
+   <div class="span6 offset3">
+     <%= form_for(@trip) do |f| %>
+       <% if @trip.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@trip.errors.count, "error") %> prohibited this trip from being saved:</h2>
 
-      <ul>
-      <% @trip.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+            <ul>
+            <% @trip.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+            </ul>
+          </div>
+       <% end %>
 
-  <div class="field">
-    <%= f.label :code %><br />
-    <%= f.number_field :code %>
+       <%= f.label :code %><br />
+       <%= f.number_field :code %>
+       
+       <%= f.label :tour_name %><br />
+       <%= f.text_field :tour_name %>
+
+       <%= f.label :start_date %><br />
+       <%= f.date_select :start_date %>
+
+       <%= f.label :end_date %><br />
+       <%= f.date_select :end_date %>
+
+       <%= f.label :organizer %><br />
+       <%= f.text_field :organizer %>
+
+       <%= f.label :destination %><br />
+       <%= f.text_field :destination %>
+
+       <%= f.label :trip_type %><br />
+       <%= f.text_field :trip_type %>
+
+       <%= f.label :trip_status %><br />
+       <%= f.text_field :trip_status %>
+       
+       <%= f.submit "Create Trip", class: "btn btn-large btn-primary" %>
+     <% end %>
   </div>
-  <div class="field">
-    <%= f.label :tour_name %><br />
-    <%= f.text_field :tour_name %>
-  </div>
-  <div class="field">
-    <%= f.label :start_date %><br />
-    <%= f.date_select :start_date %>
-  </div>
-  <div class="field">
-    <%= f.label :end_date %><br />
-    <%= f.date_select :end_date %>
-  </div>
-  <div class="field">
-    <%= f.label :organizer %><br />
-    <%= f.text_field :organizer %>
-  </div>
-  <div class="field">
-    <%= f.label :destination %><br />
-    <%= f.text_field :destination %>
-  </div>
-  <div class="field">
-    <%= f.label :trip_type %><br />
-    <%= f.text_field :trip_type %>
-  </div>
-  <div class="field">
-    <%= f.label :trip_status %><br />
-    <%= f.text_field :trip_status %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>

@@ -13,9 +13,11 @@
 class Planner < ActiveRecord::Base
   attr_accessible :email, :name
 
+  before_save {|user| user.email == email.downcase}
   has_many :trips
   belongs_to :organization
 
-  validates :name, :presence => true, :uniqueness => true
-  validates :email, :presence => true, :uniqueness => true
+  validates :name, :presence => true, :uniqueness => true, length: {maximum: 50}
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  validates :email, presence: true, format: { with: VALID_EMAIL_REGEX }, uniqueness: {case_sensitive: false}
 end
