@@ -17,7 +17,6 @@
               %ul.dropdown-menu
                 %li= link_to "Profile", current_user
                 %li.divider
-                %li
-                  = link_to "Sign out", signout_path, method: "delete"
+            %li= link_to "Sign out", signout_path, method: "delete"
           - else
             %li= link_to "Sign in", signin_path
