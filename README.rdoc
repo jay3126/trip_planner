@@ -1,3 +1,16 @@
 == README
 
 This is a small application for Travellers where they can plan their trip.
+
+== INSTRUCTIONS
+
+1. Clone the repository.
+2. Run "bundle install"
+3. Run "bundle exec rake db:migrate"
+In case of errors while running the above command in Ubuntu, please do the following:
+
+1. sudo apt-get install libv8-dev
+2. sudo apt-get install nodejs
+
+Now, run the bundle exec rake db:migrate comand again. This time it will run without any errors in it.
+Now, start the rails server by typing the following command - "rails s"
