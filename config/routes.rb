@@ -7,8 +7,6 @@ TripPlanner::Application.routes.draw do
   match '/signout', to: 'sessions#destroy', via: :delete
   root to: 'entrances#home'
 
-  match '/signup', to: 'users#new'
-
   match '/about', to: 'entrances#about'
   match '/contact', to: 'entrances#contact'
 
