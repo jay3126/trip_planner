@@ -1,0 +1,16 @@
+.row
+  .span6.offset3
+    = form_for(@planner) do |f|
+      - if @planner.errors.any?
+        #error_explanation
+          %h2
+            = pluralize(@planner.errors.count, "error")
+            prohibited this planner from being saved:
+          %ul
+            - @planner.errors.full_messages.each do |msg|
+              %li= msg
+      = f.label :name
+      = f.text_field :name
+      = f.label :email
+      = f.text_field :email
+      = f.submit "Create planner", class: "btn btn-large btn-primary"

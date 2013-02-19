@@ -1,0 +1,17 @@
+%h1 All planners
+%table
+  %tr
+    %th Name
+    %th Email
+    %th
+    %th
+    %th
+  - @planners.each do |planner|
+    %tr
+      %td= planner.name
+      %td= planner.email
+      %td= link_to 'Show', planner
+      %td= link_to 'Edit', edit_planner_path(planner)
+      %td= link_to 'Destroy', planner, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Planner', new_planner_path
