@@ -10,6 +10,7 @@ gem 'bootstrap-will_paginate'
 gem 'haml-rails'
 gem 'html2haml'
 gem 'jquery-datatables-rails'
+gem 'heroku'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
