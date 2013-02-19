@@ -20,4 +20,9 @@ class Trip < ActiveRecord::Base
   attr_accessible :code, :destination, :end_date, :organizer, :start_date, :tour_name, :trip_status, :trip_type
 
   belongs_to :planner
+
+  def trip_duration(start_date = Date.today, end_date = Date.today)
+    duration = end_date - start_date
+    return duration
+  end
 end
