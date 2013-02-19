@@ -1,0 +1,18 @@
+.row
+  .span6.offset3
+    = form_for(@organization) do |f|
+      - if @organization.errors.any?
+        #error_explanation
+          %h2
+            = pluralize(@organization.errors.count, "error")
+            prohibited this organization from being saved:
+          %ul
+            - @organization.errors.full_messages.each do |msg|
+              %li= msg
+      = f.label :name
+      %br/
+      = f.text_field :name
+      = f.label :address
+      %br/
+      = f.text_field :address
+      = f.submit "Create Organization", class: "btn btn-large btn-primary"
