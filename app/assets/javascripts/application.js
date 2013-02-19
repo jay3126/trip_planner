@@ -18,4 +18,5 @@
 //= require jquery.min.js
 //= require jquery_ujs.js
 //= require jquery.dataTables.js
+//= require ColReorder.js
 //= require_tree .
