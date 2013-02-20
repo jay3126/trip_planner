@@ -9,7 +9,6 @@ gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 gem 'haml-rails'
 gem 'html2haml'
-gem 'jquery-datatables-rails'
 gem 'heroku'
 
 # Bundle edge Rails instead:
@@ -49,6 +48,8 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+  gem 'jquery-datatables-rails', :git => 'git://github.com/rweng/jquery-datatables-rails'
+  gem 'jquery-ui-rails'  
 end
 
 gem 'jquery-rails'

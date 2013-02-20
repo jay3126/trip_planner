@@ -1,29 +1,33 @@
 %h1 Listing trips
-%table.dataTable
-  %tr
-    %th Code
-    %th Tour name
-    %th Start date
-    %th End date
-    %th Organizer
-    %th Destination
-    %th Trip Type
-    %th Trip Status
-    %th Actions
-    %th
-    %th
-  - @trips.each do |trip|
+%table{:id => "trips", :class => "display"}
+  %thead
     %tr
-      %td= trip.code
-      %td= trip.tour_name
-      %td= trip.start_date
-      %td= trip.end_date
-      %td= trip.organizer
-      %td= trip.destination
-      %td= trip.trip_type
-      %td= trip.trip_status
-      %td= link_to 'Show', trip
-      %td= link_to 'Edit', edit_trip_path(trip)
-      %td= link_to 'Destroy', trip, method: :delete, data: { confirm: 'Are you sure?' }
+      %th Code
+      %th Tour name
+      %th Start date
+      %th End date
+      %th Organizer
+      %th Destination
+      %th Trip Type
+      %th Trip Status
+      %th Actions
+
+  %tbody
+    - @trips.each do |trip|
+      %tr
+        %td= trip.code
+        %td= trip.tour_name
+        %td= trip.start_date
+        %td= trip.end_date
+        %td= trip.organizer
+        %td= trip.destination
+        %td= trip.trip_type
+        %td= trip.trip_status
+        %td
+          = link_to 'Show', trip
+          |
+          = link_to 'Edit', edit_trip_path(trip)
+          |
+          = link_to 'Destroy', trip, method: :delete, data: { confirm: 'Are you sure?' }
 %br/
 = link_to 'New Trip', new_trip_path, class: "btn btn-medium btn-secondary"
