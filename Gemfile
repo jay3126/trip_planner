@@ -17,6 +17,7 @@ gem 'heroku'
 group :development, :test do
   gem 'mysql2'
   gem 'rspec-rails'
+  gem 'debugger'
 end
 
 group :production, :staging do
