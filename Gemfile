@@ -20,7 +20,7 @@ group :development, :test do
 end
 
 group :production, :staging do
-  gem 'mysql2'
+  gem 'pg'
 end
 
 group :development do
