@@ -14,14 +14,13 @@ gem 'heroku'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-
 group :development, :test do
-  gem 'sqlite3'
+  gem 'mysql2'
   gem 'rspec-rails'
 end
 
 group :production, :staging do
-  gem 'pg'
+  gem 'mysql2'
 end
 
 group :development do
@@ -34,9 +33,6 @@ group :test do
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
 end
-  
-#gem 'sqlite3'
-
 
 # Gems used only for assets and not required
 # in production environments by default.
